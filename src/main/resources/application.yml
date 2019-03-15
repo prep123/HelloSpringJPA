@@ -1,0 +1,12 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/hello_springboot_jpa
+    username: root
+  jpa:
+    hibernate:
+      # create: create a new table and destroy previous data
+      # update: update referred table and keep previous data
+      # validate: just verify if entity match table
+      ddl-auto: update
+    show-sql: true
