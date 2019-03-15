@@ -37,6 +37,8 @@ public class MonkeyRepoTest {
 
     @Test
     public void finaOne(){
+        Monkey monkey = monkeyRepo.findOneById((long) 2);
+        Print.monkey(monkey);
     }
 
     // 我擦，虽然先执行了saveOne，而且也有结果，但是数据库中

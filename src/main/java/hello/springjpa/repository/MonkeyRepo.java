@@ -2,6 +2,7 @@ package hello.springjpa.repository;
 
 import hello.springjpa.entity.Monkey;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 
 import java.util.List;
 
@@ -16,4 +17,6 @@ public interface MonkeyRepo
     // select * from monkeys where id < #{id}
     List<Monkey> findByIdBefore(long id);
 
+    @Query("select m from Monkey m where m.id = ?1")
+    Monkey findOneById(Long id);
 }
